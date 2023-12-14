@@ -17,10 +17,10 @@ const SearchBar = () => {
     const [showbool, setshowbool] = useState(false)
 
     const performSearch = async () => {
-      if (model === "Any Model") {
+      if (model === "Any Make") {
         setmodel("")
       }
-      if (make === "Any Make") {
+      if (make === "Any Model") {
         setmake("")
       }
 
@@ -65,7 +65,7 @@ const SearchBar = () => {
   <div className="grid md:grid-cols-4 md:gap-6">
     <div className="relative z-0 w-full mb-6 group">
     <select id="model" name='model' onChange={(event) => { setmodel(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
-        <option value="Any Model">Any Model</option>
+        <option value="Any Make">Any Make</option>
         <option value="Albarth">Albarth</option>
         <option value="Alpha Romeo">Alpha Romeo</option>
         <option value="Alpine">Alpine</option>
@@ -118,7 +118,7 @@ const SearchBar = () => {
  </div>
     <div className="relative z-0 w-full mb-6 group">
     <select id="country" name='country' onChange={(event) => { setmake(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
-        <option value="Any Make">Any Make</option>
+        <option value="Any Model">Any Model</option>
         <option value="2023">2023</option>
         <option value="2022">2022</option>
         <option value="2021">2021</option>

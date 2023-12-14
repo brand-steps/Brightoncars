@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "homepage": "https://www.equipmentsuppliers.co.uk/",
+  "name": "brighton-car",
+  "homepage": "https://brightoncarssales.co.uk/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
