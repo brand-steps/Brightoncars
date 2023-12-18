@@ -36,8 +36,8 @@ function Footer2() {
             <div>
               <Footer.Title title="Follow us" className='headcolors'/>
               <Footer.LinkGroup col>
-                <Footer.Link href="#"className='text-black'>Github</Footer.Link>
-                <Footer.Link href="#" className='text-black'>Discord</Footer.Link>
+                <Footer.Link href="#"className='text-black'>Facebook</Footer.Link>
+                <Footer.Link href="#" className='text-black'>Instagram</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
