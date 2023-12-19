@@ -68,10 +68,10 @@ const Contactus = () => {
 
                 </p>
                 <p class="text-white  ">
-                  support@equimentSupplier.com
+                  info@brightoncarsales.co.uk
                 </p>
                 <p class="text-white  ">
-                01273 569355
+                01273 090019
                 </p>
               </div>
             </div>
@@ -93,10 +93,10 @@ const Contactus = () => {
                   Sales
                 </p>
                 <p class="text-white  ">
-                  sales@equimentSupplier.com
+                info@brightoncarsales.co.uk
                 </p>
                 <p class="text-white  ">
-                01273 569355
+                01273 090019
                 </p>
               </div>
             </div>
@@ -116,10 +116,10 @@ const Contactus = () => {
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold textclr">Info</p>
                 <p class="text-white  ">
-                  info@equimentSupplier.com
+                info@brightoncarsales.co.uk
                 </p>
                 <p class="text-white  ">
-                01273 569355
+                01273 090019
                 </p>
               </div>
             </div>
@@ -139,10 +139,10 @@ const Contactus = () => {
               <div class="ml-6 grow">
                 <p class="mb-2 font-bold textclr">Enquiries</p>
                 <p class="text-white  ">
-                  bugs@equimentSupplier.com
+                info@brightoncarsales.co.uk
                 </p>
                 <p class="text-white  ">
-                01273 569355
+                01273 090019
                 </p>
               </div>
             </div>

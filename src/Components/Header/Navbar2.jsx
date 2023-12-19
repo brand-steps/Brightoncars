@@ -38,7 +38,7 @@ const Navbar2 = () => {
   return (
    
 <Navbar fluid rounded className="bg-slate-200">
-      <Navbar.Brand href="https://brightoncars.vercel.app/" > 
+      <Navbar.Brand href="https://brightoncarssales.co.uk/" > 
         <img src={logos} className="mr-3  h-20" alt="Flowbite React Logo" />
       </Navbar.Brand>
       <div className="flex md:order-2">
@@ -60,14 +60,23 @@ const Navbar2 = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" active className="divhead "> 
+        <Link to="/">
+        <Navbar.Link active className="divhead "> 
          <span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" /> Home </span>
          </Navbar.Link>
-        <Navbar.Link href="/stock" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Current Stock</span></Navbar.Link>
-        <Navbar.Link href="/sold" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Sold</span></Navbar.Link>
-        <Navbar.Link href="/finance" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Finance</span></Navbar.Link>
-        <Navbar.Link href="/contact" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Contact</span></Navbar.Link>
-
+         </Link>
+         <Link to="/stock">
+        <Navbar.Link className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Current Stock</span></Navbar.Link>
+        </Link>
+        <Link to="/sold">
+        <Navbar.Link className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Sold</span></Navbar.Link>
+        </Link>
+        <Link to="/finance">
+        <Navbar.Link href="/" className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Finance</span></Navbar.Link>
+        </Link>
+        <Link to="/contact">
+        <Navbar.Link className="divhead "><span className="headcolorss text-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BSicon_STR_red.svg/1024px-BSicon_STR_red.svg.png" alt="ww" className="h-6 w-6 inline" />Contact</span></Navbar.Link>
+        </Link>
       </Navbar.Collapse>
     </Navbar>
   );

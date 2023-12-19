@@ -18,7 +18,7 @@ const NavContact2 = () => {
     <Navbar fluid rounded className=' border-b-2 border-rose-500 text-black bg-slate-200'>
     <Navbar.Brand href="">
     <img src={phone} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
-      <span className="self-center whitespace-nowrap text-xl font-semibold">01273 569355</span>
+      <span className="self-center whitespace-nowrap text-xl font-semibold">01273 090019</span>
     </Navbar.Brand>
     <div className="flex md:order-2">
       <p className='text-black'>      

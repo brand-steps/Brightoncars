@@ -29,8 +29,8 @@ function Footer2() {
             <div>
               <Footer.Title title="about" className='headcolors'/>
               <Footer.LinkGroup col>
-                <Footer.Link href="#" className='text-black'>About Us</Footer.Link>
-                <Footer.Link href="#" className='text-black'>Home</Footer.Link>
+              <Footer.Link href="/" className='text-black'>Home</Footer.Link>
+                <Footer.Link href="/contact" className='text-black'>Contact</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -44,14 +44,13 @@ function Footer2() {
               <Footer.Title title="Legal" className='headcolors' />
               <Footer.LinkGroup col>
                 <Footer.Link href="#" className='text-black'>Privacy Policy</Footer.Link>
-                <Footer.Link href="#" className='text-black'>Terms &amp; Conditions</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Flowbite™" year={2022} className='text-black' />
+          <Footer.Copyright href="https://londonlogodesigners.co.uk/" by="LondonLogoDesigners" year={2023} className='text-black' />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
            {/*} <Footer.Icon href="#" icon={BsFacebook} className='headcolors'/>
             <Footer.Icon href="#" icon={BsInstagram} className='headcolors' />
@@ -59,7 +58,6 @@ function Footer2() {
             <Footer.Icon href="#" icon={BsGithub} className='headcolors'/>
 <Footer.Icon href="#" icon={BsDribbble} className='headcolors'/> */}
         <img src={insta} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
-        <img src={phone} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
         <img src={face} className="mr-3 inline h-7 " alt="Flowbite React Logo" />
 
 

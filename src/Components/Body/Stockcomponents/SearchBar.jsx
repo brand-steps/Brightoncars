@@ -20,7 +20,7 @@ const SearchBar = () => {
       if (model === "Any Make") {
         setmodel("")
       }
-      if (make === "Any Model") {
+      if (make === "Any year") {
         setmake("")
       }
 
@@ -118,7 +118,7 @@ const SearchBar = () => {
  </div>
     <div className="relative z-0 w-full mb-6 group">
     <select id="country" name='country' onChange={(event) => { setmake(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
-        <option value="Any Model">Any Model</option>
+        <option value="Any year">Any year</option>
         <option value="2023">2023</option>
         <option value="2022">2022</option>
         <option value="2021">2021</option>
