@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 const SearchBar = () => {
   const navigate = useNavigate();
     const [model, setmodel] = useState("")
+    const [submodel, setsubmodel] = useState("")
     const [make, setmake] = useState("")
     const [price, setprices] = useState("")
     const [results, setResults] = useState([]);
@@ -20,13 +21,17 @@ const SearchBar = () => {
       if (model === "Any Make") {
         setmodel("")
       }
+      if (submodel === "Any Model") {
+        setsubmodel("")
+      }
       if (make === "Any year") {
         setmake("")
       }
 
+
       try {
         const response = await axios.get(
-          `https://drab-tan-sheep-fez.cyclic.app/api/search?make=${model}&year=${make}&price=${price}`
+          `https://drab-tan-sheep-fez.cyclic.app/api/search?make=${model}&model=${submodel}&year=${make}&price=${price}`
         );
         console.log("Search results: ", response.data);
         setResults(response.data);
@@ -62,10 +67,20 @@ const SearchBar = () => {
 
         <div className='mx-10 my-6 '>
 
-  <div className="grid md:grid-cols-4 md:gap-6">
+  <div className="grid md:grid-cols-5 md:gap-6">
     <div className="relative z-0 w-full mb-6 group">
     <select id="model" name='model' onChange={(event) => { setmodel(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
         <option value="Any Make">Any Make</option>
+        
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Ford">Ford</option>
+        <option value="Honda">Honda</option>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Peugeot">Peugeot</option>
+
+        {/*}
         <option value="Albarth">Albarth</option>
         <option value="Alpha Romeo">Alpha Romeo</option>
         <option value="Alpine">Alpine</option>
@@ -114,6 +129,112 @@ const SearchBar = () => {
         <option value="Vauxhall">Vauxhall</option>
         <option value="Volkswagen">Volkswagen</option>
         <option value="Volvo">Volvo</option>
+  */}
+</select>
+ </div>
+ <div className="relative z-0 w-full mb-6 group">
+    <select id="submodel" name='submodel' onChange={(event) => { setsubmodel(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
+    <option value="Any Model">Any Model</option>
+
+    {model === "Audi" && (
+<>
+
+        <option value="All 1-series">A1</option>
+        <option value="A3">A3</option>
+        <option value="A4">A4</option>
+        <option value="A5">A5</option>
+        <option value="A6">A6</option>
+        <option value="e-tron">e-tron</option>
+        <option value="Q2">Q2</option>
+        <option value="Q3">Q3</option>
+        <option value="Q4">Q4</option>
+        <option value="Q5">Q5</option>
+        <option value="Q7">Q7</option>
+        <option value="Q8">Q8</option>
+        <option value="T1">T1</option>
+
+
+
+</>
+        )}
+
+{model === "BMW" && (
+<>
+        <option value="All 1-series">All 1-series</option>
+        <option value="All 2-series">All 2-series</option>
+        <option value="All 3-series">All 3-series</option>
+        <option value="All 4-series">All 4-series</option>
+        <option value="All 5-series">All 5-series</option>
+        <option value="All 6-series">All 6-series</option>
+        <option value="All 7-series">All 7-series</option>
+
+
+
+</>
+        )}
+        {model === "Ford" && (
+<>
+        <option value="B-Max">B-Max</option>
+        <option value="ECosport">ECosport</option>
+        <option value="Fiesta">Fiesta</option>
+        <option value="Focus">Focus</option>
+        <option value="Galaxy">Galaxy</option>
+        <option value="Puma">Puma</option>
+        <option value="S-Max">S-Max</option>
+
+
+
+</>
+        )}
+        {model === "Honda" && (
+<>
+        <option value="Civic">Civic</option>
+        <option value="CRV">CRV</option>
+        <option value="HRV">HRV</option>
+        <option value="Jazz">Jazz</option>
+
+</>
+        )}
+        {model === "Hyundai" && (
+<>
+        <option value="Bayon">Bayon</option>
+        <option value="I10">I10</option>
+        <option value="I20">I20</option>
+        <option value="I30">I30</option>
+        <option value="Ioniq">Ioniq</option>
+        <option value="Kona">Kona</option>
+        <option value="Tucson">Tucson</option>
+
+
+
+</>
+        )}
+                {model === "Nissan" && (
+<>
+        <option value="Juke">Juke</option>
+        <option value="Leaf">Leaf</option>
+        <option value="Micra">Micra</option>
+        <option value="Note">Note</option>
+        <option value="Qashqai">Qashqai</option>
+        <option value="Kona">Kona</option>
+        <option value="X-Trail">X-Trail</option>
+
+
+
+</>
+        )}
+                {model === "Peugeot" && (
+<>
+        <option value="108">108</option>
+        <option value="2008">2008</option>
+        <option value="3008">3008</option>
+        <option value="208">208</option>
+        <option value="5008">5008</option>
+        <option value="508">508</option>
+        <option value="308">308</option>
+
+</>
+        )}
 </select>
  </div>
     <div className="relative z-0 w-full mb-6 group">
@@ -146,12 +267,13 @@ const SearchBar = () => {
 
 </select>
  </div>
+
     <div className="relative z-0 w-full mb-6 group">
     <Box className="w-20 lg:w-52 md:w-36 sm:w-28">
         <p>Price</p>
       <Slider onChange={(event) => { setprices(event.target.value);}} className="w-full"
       sx={{
-        width: 300,
+        width: 250,
         color: '#E5A317',
         '& .MuiSlider-thumb': {
           borderRadius: '1px',

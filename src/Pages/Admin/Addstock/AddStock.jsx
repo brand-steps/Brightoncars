@@ -236,61 +236,122 @@ if (!make || make == "Any Model") {
     </div>
     <div className="relative z-0 w-full mb-6 group">
     <select id="make" name='make' onChange={(event) => { setmake(event.target.value);}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
-        <option>Any Model</option>
-        <option value="Albarth">Albarth</option>
-        <option value="Alpha Romeo">Alpha Romeo</option>
-        <option value="Alpine">Alpine</option>
-        <option value="Aston Martin">Aston Martin</option>
+        <option value="Any Make">Any Make</option>
+        
         <option value="Audi">Audi</option>
-        <option value="Bently">Bently</option>
         <option value="BMW">BMW</option>
-        <option value="Byd">Byd</option>
-        <option value="Citroen">Citroen</option>
-        <option value="Cupra">Cupra</option>
-        <option value="Dacia">Dacia</option>
-        <option value="Ds">Ds</option>
-        <option value="Flat">Flat</option>
         <option value="Ford">Ford</option>
-        <option value="Genesis">Genesis</option>
         <option value="Honda">Honda</option>
         <option value="Hyundai">Hyundai</option>
-        <option value="Infiniti">Infiniti</option>
-        <option value="Isuzu">Isuzu</option>
-        <option value="Iveco">Iveco</option>
-        <option value="Jaguar">Jaguar</option>
-        <option value="Jeep">Jeep</option>
-        <option value="Kia">Kia</option>
-        <option value="Land Rover">Land Rover</option>
-        <option value="Levc">Levc</option>
-        <option value="Lexus">Lexus</option>
-        <option value="Maserati">Maserati</option>
-        <option value="Mazda">Mazda</option>
-        <option value="Mercedes">Mercedes</option>
-        <option value="MG">MG</option>
-        <option value="MINI">MINI</option>
-        <option value="Mitsubishi">Mitsubishi</option>
         <option value="Nissan">Nissan</option>
         <option value="Peugeot">Peugeot</option>
-        <option value="Polestar">Polestar</option>
-        <option value="Porsche">Porsche</option>
-        <option value="Renault">Renault</option>
-        <option value="Seat">Seat</option>
-        <option value="Skonda">Skonda</option>
-        <option value="Smart">Smart</option>
-        <option value="Ssangyong">Ssangyong</option>
-        <option value="Subaru">Subaru</option>
-        <option value="Suzuki">Suzuki</option>
-        <option value="Tesla">Tesla</option>
-        <option value="Toyota">Toyota</option>
-        <option value="Vauxhall">Vauxhall</option>
-        <option value="Volkswagen">Volkswagen</option>
-        <option value="Volvo">Volvo</option>
 </select>   </div>
   </div>
   <div className="grid md:grid-cols-5 md:gap-6">
   <div className="relative z-0 w-full mb-6 group">
-      <input  name="model" onChange={(event) => {setmodel (event.target.value); setmodelError("")}} id="model" className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-      <label for="model" className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Car Model</label>
+      <select id="submodel" name='submodel' onChange={(event) => {setmodel (event.target.value); setmodelError("")}} className="bg-black text-white text-sm rounded-lg focus:ring-blue-500  block w-full p-2.5 0   ">
+    <option value="Any Model">Any Model</option>
+
+    {make === "Audi" && (
+<>
+
+        <option value="All 1-series">A1</option>
+        <option value="A3">A3</option>
+        <option value="A4">A4</option>
+        <option value="A5">A5</option>
+        <option value="A6">A6</option>
+        <option value="e-tron">e-tron</option>
+        <option value="Q2">Q2</option>
+        <option value="Q3">Q3</option>
+        <option value="Q4">Q4</option>
+        <option value="Q5">Q5</option>
+        <option value="Q7">Q7</option>
+        <option value="Q8">Q8</option>
+        <option value="T1">T1</option>
+
+
+
+</>
+        )}
+
+{make === "BMW" && (
+<>
+        <option value="All 1-series">All 1-series</option>
+        <option value="All 2-series">All 2-series</option>
+        <option value="All 3-series">All 3-series</option>
+        <option value="All 4-series">All 4-series</option>
+        <option value="All 5-series">All 5-series</option>
+        <option value="All 6-series">All 6-series</option>
+        <option value="All 7-series">All 7-series</option>
+
+
+
+</>
+        )}
+        {make === "Ford" && (
+<>
+        <option value="B-Max">B-Max</option>
+        <option value="ECosport">ECosport</option>
+        <option value="Fiesta">Fiesta</option>
+        <option value="Focus">Focus</option>
+        <option value="Galaxy">Galaxy</option>
+        <option value="Puma">Puma</option>
+        <option value="S-Max">S-Max</option>
+
+
+
+</>
+        )}
+        {make === "Honda" && (
+<>
+        <option value="Civic">Civic</option>
+        <option value="CRV">CRV</option>
+        <option value="HRV">HRV</option>
+        <option value="Jazz">Jazz</option>
+
+</>
+        )}
+        {make === "Hyundai" && (
+<>
+        <option value="Bayon">Bayon</option>
+        <option value="I10">I10</option>
+        <option value="I20">I20</option>
+        <option value="I30">I30</option>
+        <option value="Ioniq">Ioniq</option>
+        <option value="Kona">Kona</option>
+        <option value="Tucson">Tucson</option>
+
+
+
+</>
+        )}
+                {make === "Nissan" && (
+<>
+        <option value="Juke">Juke</option>
+        <option value="Leaf">Leaf</option>
+        <option value="Micra">Micra</option>
+        <option value="Note">Note</option>
+        <option value="Qashqai">Qashqai</option>
+        <option value="Kona">Kona</option>
+        <option value="X-Trail">X-Trail</option>
+
+
+
+</>
+        )}
+                {make === "Peugeot" && (
+<>
+        <option value="108">108</option>
+        <option value="2008">2008</option>
+        <option value="3008">3008</option>
+        <option value="208">208</option>
+        <option value="5008">5008</option>
+        <option value="508">508</option>
+        <option value="308">308</option>
+
+</>
+        )}
+</select>
       {modelError && <p className="error-message">{modelError}</p>} 
 
   </div>
